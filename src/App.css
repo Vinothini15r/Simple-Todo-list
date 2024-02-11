@@ -1,0 +1,247 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+  background-image: url("E:\vscode temp\new\public\bg2.jpg");
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.todo-app {
+  width: 400px;
+  text-align: center;
+  background-image: url("E:\vscode temp\new\public\img2.jpg");
+  padding: 100px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), 0 0 20px rgba(0, 0, 255, 0.5);
+  border-radius: 50px;
+  background-color: #fff;
+  margin-top: 50px;
+  animation: neonGlow 2s infinite alternate;
+}
+
+@keyframes neonGlow {
+  from {
+    box-shadow: 0 0 20px rgba(0, 0, 255, 0.5);
+  }
+  to {
+    box-shadow: 0 0 30px rgba(0, 0, 255, 0.7);
+  }
+}
+
+.task-input {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-input input {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  outline: none;
+}
+
+.task-input button {
+  cursor: pointer;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+.task-input button:hover {
+  background-color: #0056b3;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+li:hover {
+  background-color: #f9f9f9;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #777;
+}
+
+li span {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+li button {
+  cursor: pointer;
+  padding: 10px 15px;
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+li button:hover {
+  background-color: #c0392b;
+}
+
+.task-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.task-actions > div > span {
+  margin-right: 10px;
+}
+
+.filter-buttons button {
+  cursor: pointer;
+  padding: 10px 15px;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.filter-buttons button:hover {
+  background-color: #ddd;
+}
+
+.task-actions button {
+  cursor: pointer;
+  padding: 10px 15px;
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+.task-actions button:hover {
+  background-color: #c0392b;
+}
+
+/* Additional styling for task count and filter buttons */
+.task-actions > div {
+  display: flex;
+  align-items: center;
+}
+
+.task-count {
+  font-size: 14px;
+  color: #777;
+  margin-right: 20px;
+}
+
+.filter-buttons {
+  display: flex;
+}
+
+/* Responsive adjustments for small screens */
+@media screen and (max-width: 400px) {
+  .todo-app {
+    width: 90%;
+  }
+}
+
+/* Add animations */
+.task-input input,
+.task-input button,
+li,
+.filter-buttons button,
+.task-actions button {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Add a subtle fade-in effect for tasks */
+li {
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Add a cohesive color palette */
+body {
+  --primary-color: #3498db;
+  --secondary-color: #e74c3c;
+}
+
+.todo-app {
+  /* ... (previous styles) */
+  background-color: #ecf0f1; /* Adjusted background color */
+}
+
+.task-input button,
+.filter-buttons button,
+.task-actions button {
+  background-color: var(--primary-color);
+}
+
+.task-input button:hover,
+.filter-buttons button:hover,
+.task-actions button:hover {
+  background-color: #2980b9; /* Darken the hover color */
+}
+
+/* Adjusted font and color for task count */
+.task-count {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Adjusted font size and color for the app title */
+h1 {
+  font-size: 24px;
+  color: var(--primary-color);
+}
+
+/* Adjusted font size for filter buttons */
+.filter-buttons button {
+  font-size: 14px;
+}
+
+/* Additional styling for the footer */
+.footer {
+  margin-top: 20px;
+  font-size: 12px;
+  color: #777;
+}
+
+
+
+
